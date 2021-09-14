@@ -282,12 +282,7 @@
 
 		});
 
-		//요구사항 번호 매기기
-		var no = 1;
-		$(".md.question h2").each(function(index, item) {
-			$(item).text($(item).text() + setZero(no));
-			no+=1;
-		});
+		
 
 		function setZero(num) {
 			if (num < 10) return "00" + num;
