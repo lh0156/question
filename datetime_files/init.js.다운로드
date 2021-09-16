@@ -1,0 +1,8 @@
+
+//높이 유지하기
+$("#main, #left, #right").height($(document).height() - 100);
+
+
+//외부 링크 새창 띄우기
+$("a[href^='https://www']").attr("target", "_blank");
+$("a[href^='http://www']").attr("target", "_blank");

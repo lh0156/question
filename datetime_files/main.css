@@ -1,0 +1,964 @@
+/* 
+@font-face {
+	font-family: maple; 
+	src: url('/webfonts/Maplestory.ttf')
+} 
+*/
+
+
+@font-face { 
+    font-family: 'GmarketSansMedium'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+      
+           
+           
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+
+
+html, body, div, span, p, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, input, a, textarea, select, option, table, th, td, button, pre, strong, b, i, blockquote, code, s {
+	font-family: 'GmarketSansMedium';
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* font-family: '맑은 고딕', 'Malgun Gothic'; */
+    /* font-family: 'S-CoreDream-3Light'; */
+	color: #888;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong, blockquote {
+	color: #555;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+html { 
+	overflow-y: scroll; 
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+#menu {
+	background-color: #686E80; /* 메인 색상 */
+	height: 50px;
+	min-width: 1200px;
+}
+
+#menu > #menuleft {
+	border-right: 1px dashed lightgray;
+	width: 348px;
+	height: 50px;
+	margin: 0px; padding: 0px;
+	list-style-type: none;
+	float: left;
+}
+
+#menu::after, #menu > #menuleft::after, #menu > #menuright::after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+
+
+#menu > #menuright {
+	width: auto;
+	height: 50px;
+	margin: 0px; padding: 0px;
+	list-style-type: none;
+	float: left;
+}
+
+#menu > #menuleft > li {
+	float: left;
+	margin: 0px; padding: 0px;
+	color: #fff;
+	padding-top: 15px;
+	padding-left: 25px;
+}
+
+#menu > #menuright > li {
+	float: left;
+	margin: 0px; padding: 0px;
+	color: #fff;
+	padding-top: 15px;
+    padding-left: 21px;
+}
+
+#menu > #menuleft > li > a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+#menu > #menuright > li > a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#menu > #menuleft > li > span {
+	color: #fff;
+}
+
+#menu i {
+    color: #fff;
+}
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+#left, #right {
+	float: left;
+}
+
+#left {
+	width: 348px;
+	border-right: 1px dashed gray;
+	padding: 25px;
+}
+
+#left #lefticon {
+	font-size: 74px;
+	color:#686E80; /* 메인 색상 */
+	float: left;
+	margin: 5px 15px;
+}
+
+#right {
+	width: 800px;
+	width: calc(100% - 350px);
+	padding: 25px;
+}
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+/* 좌측 심볼 아이콘 아래 메뉴 */
+#left > ul {
+    clear: both;
+    margin-top: 100px;
+}
+#left > ul > li {
+}
+
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+/* 관리자 > 과정 */
+.table.courselist {
+    width: 740px;
+}
+.table.courselist th {
+    text-align: center;
+}
+.table.courselist td {
+    text-align: center;
+}
+.table.courselist th:nth-child(1) {
+    width: 50px;
+}
+.table.courselist th:nth-child(2) {
+    width: auto;
+}
+.table.courselist th:nth-child(3) {
+    width: 120px;
+}
+.table.courselist th:nth-child(4) {
+    width: 120px;
+}
+.table.courselist td:nth-child(2) {
+    text-align: left;
+}
+
+.table.courseadd {
+    width: 500px;
+}
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+/* 관리자 > 학생 */
+.table.studentlist {
+    width: 810px;
+    margin-top: 20px;
+}
+.table.studentlist th {
+    text-align: center;
+}
+.table.studentlist td {
+    text-align: center;
+}
+.table.studentlist th:nth-child(1) {
+    width: 120px;
+}
+.table.studentlist th:nth-child(2) {
+    width: 150px;
+}
+.table.studentlist th:nth-child(3) {
+    width: 120px;
+}
+.table.studentlist th:nth-child(4) {
+    width: 170px;
+}
+.table.studentlist th:nth-child(5) {
+    width: auto;
+}
+
+.table.studentadd {
+    width: 350px;
+}
+
+#selcourse {
+    width: 700px;    
+}
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+/* 관리자 > 노티스 마크 다운 */
+.table.noticelist {
+    width: 550px;
+    margin-top: 20px;
+}
+.table.noticelist th {
+	text-align: center;
+	vertical-align: middle;
+}
+.table.noticelist td {
+	text-align: left;
+	vertical-align: middle;
+}
+.table.noticelist th:nth-child(1) {
+	width: 50px;
+}
+.table.noticelist th:nth-child(2) {
+    width: auto;
+}
+.table.noticelist th:nth-child(3) {
+    width: 170px;
+}
+.table.noticelist td:nth-child(1) {
+	text-align: center;
+}
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+.table.auth {
+    width: 200px;
+}
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+.fileitem {
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.fileitem:hover {
+	border-left: 3px solid #999;
+	padding-left: 5px;
+}
+.fileitem span:nth-child(2) {
+	font-size: 12px;
+	color: #bbb;
+}
+
+.fileitemcontainer {
+	border-left: 3px solid #777;
+	padding-left: 7px;
+	column-count:3;
+	column-rule-style: solid;
+	column-rule-color: #777;
+	max-width: 1100px;
+}
+
+.mdview {
+	max-width: 1100px; /* 위의 .fileitemcontainer 와 같은 너비여야 한다. */
+	border-top: 1px solid #CCC;
+	margin-top: 50px;
+	display: none;
+	padding-bottom: 50px;
+}
+
+#btnreset {
+	display: none;
+}
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+
+
+/* 코드 */
+.table.snippetlist {
+    width: 600px;
+}
+.table.snippetlist th {
+    text-align: center;
+}
+.table.snippetlist td {
+    text-align: center;
+}
+.table.snippetlist th:nth-child(1) {
+    width: 150px;
+}
+.table.snippetlist th:nth-child(2) {
+    width: auto;
+}
+.table.snippetlist td:nth-child(2) {
+    text-align: left;
+}
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+/* 관리자 > 코드 */
+.table.filelist {
+	width: 450px;
+	margin-bottom: 50px;
+}
+.table.filelist th {
+	text-align: center;
+	vertical-align: middle;
+}
+.table.filelist td {
+	text-align: center;
+	vertical-align: middle;
+}
+.table.filelist th:nth-child(1) {
+    width: 50px;
+}
+.table.filelist th:nth-child(2) {
+    width: auto;
+}
+.table.filelist td:nth-child(2) {
+    text-align: left;
+}
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+
+
+/* 시작:: Common MarkDown */
+
+.md {
+	color: #555;
+	/* font-size: 14px; */
+	font-size: 15px;
+}
+
+
+.md h1 { /* 큰제목 */
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 4px;
+	margin-bottom: 16px;
+	font-size: 24px;
+	font-variant: small-caps;
+}
+
+.md h1 i {
+	font-size: 16px;
+	color: #666;
+}
+
+
+.md h2 { /* 중간제목 */
+	border-bottom: 1px dashed #ddd;
+	padding-bottom: 4px;
+	margin-bottom: 16px;
+	font-size: 21px;
+	font-variant: small-caps;
+}
+
+.md h2 i {
+	font-size: 12px;
+	color: #666;
+}
+
+.md h3 {
+	font-size: 18px;
+	margin-top: 35px;
+}
+
+
+.md blockquote { /* 인용 */
+	border-left: 7px solid #eee;
+	padding-left: 7px;
+	margin: 7px;
+}
+
+
+
+.md pre {
+	font-family: "consolas";
+	border-left: 1px solid #ccc;	
+	border-right: 1px solid #ccc;	
+	background-color: rgba(0, 0, 0, .021);
+	padding: 10px 15px;
+}
+
+
+.md pre code {
+	font-family: d2 !important;
+	line-height: 1.6em !important;
+}
+
+.md strong {
+	/* color: cornflowerblue; */
+	color: tomato;
+	font-weight: normal;
+}
+
+.md s {
+	color: #aaa;
+}
+
+.md a {
+	/* color: #ff8080; */
+	color: goldenrod;
+	text-decoration: none;
+}
+
+.md a:hover {
+	/* color: tomato; */
+}
+
+.md a > i {
+	font-size: .74rem;
+}
+
+/* 끝:: Common MarkDown */
+
+
+
+
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+
+
+
+/* 시작:: Notice MarkDown */
+
+.md.notice {
+
+}
+
+.md.notice h1 {
+	font-variant: normal;
+	font-size: 24px;
+	margin-top: 50px;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #CCC;
+}
+
+.md.notice h2 {
+	font-variant: normal;
+	font-size: 18px;
+	border: 0px;
+	margin: 0px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.md.notice h3 {
+	font-size: 16px;	
+}
+
+.md.notice > ul {
+	padding: 0px;
+	margin: 0px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.md.notice pre {
+	border: 0px;
+	background-color: rgba(0, 0, 0, .021);
+	border: 1px solid rgba(0, 0, 0, .074);
+	font-family: d2;
+	font-size: 14px;
+	/* color: #777; */
+	color: #555;
+	line-height: 20px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	display: inline-block;
+	padding: 21px 46px 21px 30px;
+}
+
+.md.notice li {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.md.notice li > code {
+	/* color: #777; */
+	color: #555;
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, .1);
+	border-radius: 3px;
+	padding: 2px 4px;
+	text-shadow: 1px 1px 1px white;
+}
+
+.md.notice table, .md.notice th, .md.notice td {
+	border: 1px solid #ccc;	
+	padding: 4px 10px;
+}
+
+.md.notice .colorpane {
+	display: inline-block; 
+	padding: 10px 30px; 
+	margin: 10px 5px 5px 5px;
+}
+
+.md.notice em {
+	font-style: normal;
+	/* color: limegreen; */
+	color: cornflowerblue;
+}
+
+.md.notice blockquote {
+	font-size: 15px;
+}
+
+
+/* 끝:: Notice MarkDown */
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+/* 관리자 > 문제 */
+.table.questionlist {
+    width: 450px;
+    margin-top: 20px;
+}
+.table.claquestionlistsslist th {
+	text-align: center;
+	vertical-align: middle;
+}
+.table.questionlist td {
+	text-align: left;
+	vertical-align: middle;
+}
+.table.questionlist th:nth-child(1) {
+	width: 50px;
+}
+.table.questionlist th:nth-child(2) {
+    width: auto;
+}
+.table.questionlist td:nth-child(1) {
+	text-align: center;
+}
+
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+/* 시작:: Index MarkDown */
+.md.index h1, .md.index h2 {
+	font-variant: normal;	
+	margin-top: 50px;
+}
+
+.md.index h1:first-child, .md.index h2:first-child {
+	margin: 20px 0px 5px 0px;
+}
+
+.md.index li {
+	margin-top: 3px;
+	margin-bottom: 7px;
+}
+
+.md li > ul {
+	margin-bottom: 9px;
+}
+
+.md.index table {
+	border: 1px solid #CCC;
+	border-collapse: collapse;
+}
+.md.index th {
+	border: 1px solid #CCC;
+	text-align: center;
+	padding: 3px;
+}
+.md.index td {
+	border: 1px solid #CCC;
+	text-align: center;
+	padding: 5px 10px;
+}
+
+.md.index table tr:nth-child(1) td
+,.md.index table tr:nth-child(2) td
+,.md.index table tr:nth-child(3) td
+,.md.index table tr:nth-child(4) td {
+	background-color: #CCE1FF;
+}
+.md.index table tr:nth-child(5) td {
+	background-color: #FFDEE9;
+}
+.md.index table tr:nth-child(2) td:nth-child(5)
+,.md.index table tr:nth-child(2) td:nth-child(9)
+,.md.index table tr:nth-child(3) td:nth-child(4)
+,.md.index table tr:nth-child(3) td:nth-child(5)
+,.md.index table tr:nth-child(3) td:nth-child(8)
+,.md.index table tr:nth-child(3) td:nth-child(9)
+,.md.index table tr:nth-child(4) td:nth-child(6)
+,.md.index table tr:nth-child(4) td:nth-child(7)
+,.md.index table tr:nth-child(4) td:nth-child(8)
+,.md.index table tr:nth-child(4) td:nth-child(9) {
+	background-color: #FFDEE9;
+}
+.md.index table tr > td:first-child {
+	background-color: #FFF;
+}
+/* 끝:: Index MarkDown */
+
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+/* 시작:: Question MarkDown */
+
+.md.question {
+	
+}
+
+.md.question h1 {
+	font-variant: normal;	
+}
+
+
+.md.question h2 { /* 문제 번호 */
+	font-variant: normal;
+	border: 0px;	
+	font-size: 17px;
+	margin-top: 100px;
+	margin-bottom: 6px;
+	padding: 0px;
+	/* color: cornflowerblue; */
+}
+
+.md.question h1 + h2 {
+	margin-top: 30px;
+}
+
+.md.question strong {
+	margin-top: 0px;
+}
+
+.md.question em { /* 입력칸, 출력칸 제목 */
+	font-style: normal;
+	/* color: tomato; */
+	/* color: cornflowerblue; */
+	display: block;
+	margin-bottom: 12px;
+	font-style: italic;
+}
+
+.md.question blockquote { /* 입력칸 */
+	margin-left: 0px;
+	margin-top: -8px; 
+	border: 1px dashed #ccc;
+	background-color: rgba(0, 0, 0, .021);
+	border-radius: 2px;
+	font-family: hack !important;
+	display: inline-block;
+	padding: 5px 10px;
+	color: #777;
+	margin-bottom: 14px;
+}
+
+.md.question blockquote p { /* 입력칸 */
+	font-family: hack;
+	font-size: 14px;
+	line-height: 1.6em;
+	display: inline-block;
+	color: #777;
+}
+
+.md.question blockquote p i.far {
+	/* color: tomato; */
+	color: cornflowerblue;
+	font-size: 13px;
+} 
+
+.md.question blockquote+blockquote {
+	/*background: yellow;*/
+	margin-top: -16px;
+}
+
+.md.question pre { /* 출력칸 */
+	margin-left: 0px;
+	margin-top: -10px;
+	border: 1px dashed #ccc;
+	background-color: rgba(0, 0, 0, .021);
+	border-radius: 2px;
+	font-family: hack !important;
+	display: inline-block;
+	padding: 5px 10px;
+	/* color: #777; */
+	color: #555;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	margin-bottom: 15px;
+}
+
+.md.question pre code { /* 출력칸 */
+	font-family: hack;
+	font-size: 14px;
+	line-height: 20px;
+	display: inline-block;
+	/* color: #777; */
+	color: #555;
+}
+
+.md.question pre+p {
+	margin-top: -2px;
+}
+
+.md.question ul {
+	padding-left: 18px;
+	margin-top: -7px;
+}
+
+.md.question ul > li > ul {
+	padding-left: 18px;
+	margin-top: 0px;
+}
+
+.md.question a { /* 문제 도움 링크 */
+	/* color: #28a745; */
+	/* color: #28a745; */
+	/* color: #17a2b8; */
+	/* color: #20c997; */
+	color: goldenrod;
+}
+
+.md.question ul li {
+	margin-top: 2px;
+	margin-bottom: 3px;
+}
+
+/* 끝:: Question MarkDown */
+
+
+
+
+
+
+
+/* ####################################################################### */
+/* ####################################################################### */
+/* ####################################################################### */
+
+
+
+
+
+
+
+/* 부트 스트랩 재정의 */
+
+* { outline: none !important; }
+
+.form-control:focus, .form-control:active, .form-control:focus, .form-control:active, .btn {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ced4da !important;
+}
+
+.form-control.active.focus, .form-control.active:focus, .form-control.focus, .form-control:active.focus, .form-control:active:focus, .form-control:focus, .form-control.active.focus, .form-control.active:focus, .form-control.focus, .form-control:active.focus, .form-control:active:focus, .form-control:focus {
+    outline: 0;
+}
+
+.list-group {
+	margin: 0;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+	background-color: #6C757D;
+	border-color: #DDDDDD;
+}
+
+.input-group-addon {
+	background-color: #6C757D;
+	border-color: #6C757D;
+}
+
+.input-group-addon > span {
+	color: white;
+}
+
+.form-control:focus {
+	border-color: #CCCCCC;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.pagination > li > a, .pagination > li > span {
+	color: #444;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+	color: tomato;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+	background-color: #6C757D;
+	border-color: #6C757D;
+}
+
+.table th {
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.form-control:focus, .btn:focus{
+	border-color: #cccccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	outline: none !important;
+}
+
+.btn-xs {
+	width: 30px;
+}
+
+
+
+/* gist CSS 수정 */
+.md .gist table td, .md .gist table td * {
+	font-size: 12px;
+	-webkit-font-smoothing: antialiased;
+	font-family: hack;
+}
+
+
+
+
+/* 스크롤바 */
+::-webkit-scrollbar{width: 14px;}
+::-webkit-scrollbar-track {background-color:#DCDFE7;}
+::-webkit-scrollbar-thumb {background-color:#DCDFE7;border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #555;}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+width:14px;height:14px;background:#DCDFE7;} 
+
+
+
+
+/* 나중에 넣을지 고려 */
+/*
+
+@media all and (max-width: 1400px) {
+	#left { display: none; }
+	#right { width: 100%; }
+	#right h1 { border-bottom: 1px dashed #ccc; margin-bottom: 15px; }
+}
+
+*/
+
+
+
+
