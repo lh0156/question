@@ -1,5 +1,0 @@
-
-//트림 함수
-function trim(str) {
-    return str.replace(/^\s+|\s+$/g,"");
-}
