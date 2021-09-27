@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/question/?003 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+
+<title>Class::Question</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="Author" content="in">	<link rel="shortcut icon" href="http://localhost/favicon.ico">
+
+<link rel="stylesheet" href="./asset/bootstrap.min.css">
+<link rel="stylesheet" href="./asset/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./asset/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" href="./asset/main.css">
+
+<script src="./asset/jquery-1.12.4.min.js.다운로드"></script>
+<script src="./asset/bootstrap.min.js.다운로드"></script>
+<script src="./asset/function.js.다운로드"></script>
+	<style>
+		.qtable td { 
+			padding: 5px 10px; 
+			text-align: right; 
+		}
+		.qtable .black, .qtable2 .black { 
+			background-color: #efefef; 
+		}
+		.qtable .green, .qtable2 .green { 
+			background-color: #ddffee; 
+		}
+		.qtable .red, .qtable2 .red { 
+			background-color: #ffe3e3; 
+		}
+		.qtable2 td { 
+			padding: 2px 10px; text-align: center; 
+		}
+		.mdlist {
+			font-size: 14px;
+			margin-top: 100px;
+			padding-left: 15px;
+			text-align: right;
+			margin-bottom: 50px;
+		}
+
+		.mdlist div {
+			cursor: pointer;
+		}
+
+		.mdlist div.now {
+			opacity: 1;
+		}
+
+		.mdlist .no {
+			/* color: cornflowerblue; */
+			margin-right: 5px;
+		}
+
+		.mdlist .title {
+			font-size: 16px;
+		}
+		.datebar {
+			text-align: right;
+			border-top: 1px solid #ccc;
+			padding-right: 7px;
+			padding-top: 3px;
+			font-size: 12px;
+			margin: 0px auto;
+			margin-top: 30px;
+			margin-bottom: 100px;
+			color: #aaa;
+		}
+	</style>
+</head>
+<body>
+	<nav id="menu">
+    <ul id="menuleft">			
+        <li><i class="fas fa-home"></i> <a href="#!" target="_top">Home</a> <span></span></li>
+    </ul>
+    <ul id="menuright">			
+        <li><i class="fas fa-chalkboard-teacher"></i> <a href="#!" target="_top">Notice.알림</a></li>
+        <li><i class="fas fa-code"></i> <a href="h#!" target="_top">Snippet.코드</a></li>
+        <li><i class="far fa-lightbulb"></i> <a href="#!" target="_top">Question.문제</a></li>        
+        <li><i class="far fa-file-alt"></i> <a href="#!">File.자료실</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> <a href="#!" target="_top">Place.장소</a></li>
+    </ul>
+</nav>
+	<section id="main" style="height: 2797px;">
+		<div id="left" style="height: 2847px;">
+			<i class="far fa-lightbulb" id="lefticon"></i>
+			<div style="clear: both;" class="mdlist">
+				<div style="clear: both;" class="mdlist">
+					<div onclick="location.href='operator.html';" style="opacity: .5;">
+						<span class="title">변수+자료형+형변환+입출력+연산자</span
+					></div>
+					<div onclick="location.href='method.html';" style="opacity: .5;">
+						<span class="title">메소드</span
+					></div>
+					<div onclick="location.href='datetime.html';" style="opacity: .5;">
+						<span class="title">날짜시간</span
+					></div>
+					<div onclick="location.href='conditional.html';" style="opacity: .5;">
+						<span class="title">조건문</span
+					></div>
+					<div onclick="location.href='iteration.html';" style="opacity: .5;">
+						<span class="title">반복문</span
+					></div>
+					<div onclick="location.href='iteration2.html';" style="opacity: .5;">
+						<span class="title">다중반복문</span
+					></div>
+					<div onclick="location.href='array.html';" style="opacity: .5;">
+						<span class="title">배열</span
+					></div>
+					<div onclick="location.href='array2.html';" style="opacity: .5;">
+						<span class="title">다중배열</span
+					></div>
+					<div onclick="location.href='string.html';" style="opacity: 1;">
+						<span class="title">문자열</span
+					></div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 우측 메인 영역 -->
+		<div id="right" style="height: 6544px;">
+			<div class="md question"><h1>문자열</h1>
+<h2>요구사항.001</h2>
+<p>문장을 입력받아 역순으로 출력하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>문장 입력 : 안녕하세요. 홍길동입니다. <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>역순 결과 : .다니입동길홍 .요세하녕안</code></pre>
+<p><em>도움</em></p>
+<ul>
+<li>루프 변수 i를 어떻게 제어하느냐?<ul>
+<li>txt.charAt(i)</li>
+<li>txt.substring(i, i+1)</li>
+</ul>
+</li>
+</ul>
+<h2>요구사항.002</h2>
+<p>이메일 주소를 입력받아 아이디와 도메인을 각각 추출하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>이메일 : hong@gmail.com <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>아이디 : hong
+도메일 : gmail.com</code></pre>
+<h2>요구사항.003</h2>
+<p>숫자를 입력받아 각 자릿수의 수의 합을 구하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>숫자 : 314 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>결과 : 3 + 1 + 4 = 8</code></pre>
+<!--
+*조건*
+- 산술연산자로 작성하지 마시오.(n % 10, n / 10 사용 금지) -> 문자열 추출 메소드 사용.
+- 자릿수의 길이는 제한 없음.
+-->
+<p><em>도움</em></p>
+<ul>
+<li>String txt = "321" → char c = (int)txt.charAt(0) → c의 값이 3인가??</li>
+</ul>
+<h2>요구사항.004</h2>
+<p>파일명 10개를 입력받아 각 확장자별로 총 개수를 출력하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>파일명 : dog.gif  <i class="far fa-keyboard"></i><br>
+파일명 : cat.jpg <i class="far fa-keyboard"></i><br>
+..<br>
+파일명 : 이력서.hwp  <i class="far fa-keyboard"></i><br>
+파일명 : 출금내역.doc <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>gif : 1개
+jpg : 2개
+png : 1개
+hwp : 4개
+doc : 2개</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>확장자는 다음으로 제한한다.(gif, jpg, png, hwp, doc)</li>
+</ul>
+<h2>요구사항.005</h2>
+<p>특정 단어가 문장내에 몇회 있어있는지 수를 세시오. </p>
+<p><em>입력</em></p>
+<blockquote>
+<p>없음</p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>'길동'을 총 2회 발견했습니다.</code></pre>
+<p><em>조건</em></p>
+<pre><code>String content = "안녕~ 길동아~ 잘가~ 길동아~";
+String word = "길동";</code></pre>
+<h2>요구사항.006</h2>
+<p>주민 등록 번호 유효성 검사를 하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>주민등록번호 : 951220-1021547 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>올바른(올바르지 않은) 주민등록번호입니다.</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>'-' 입력 유무 상관없이 검사</li>
+</ul>
+<h2>요구사항.007</h2>
+<p>숫자를 입력받아 3자리마다 , 를 붙이시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>숫자 : 1234567 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>결과 : 1,234,567</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>%,d 사용하지 마시오.</li>
+</ul>
+<h2>요구사항.008</h2>
+<p>영어 단어를 1개 입력받아 아래와 같이 출력하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>단어 : StudentName <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>결과 : Student Name</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>입력은 파스칼 표기법으로 한다.</li>
+<li>출력은 각 단어를 공백으로 구분한다.</li>
+</ul>
+<h2>요구사항.009</h2>
+<p>금지어를 마스킹 처리 하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>너랑 안놀아 바보야!! <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>너랑 안놀아 **야!!
+금지어를 1회 마스킹했습니다.</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>그것도 모르다니 멍청이;; <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>그것도 모르다니 ***;;
+금지어를 1회 마스킹했습니다.</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>잘 생각해봐 바보 멍청이 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>잘 생각해봐 ** ***
+금지어를 2회 마스킹했습니다.</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>금지어 : 바보, 멍청이</li>
+</ul>
+<h2>요구사항.010</h2>
+<p>입력받은 금액을 한글로 출력하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>금액(원) : 53216 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>일금 오만삼천이백십육원</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>금액(원) : 250 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>일금 이백오십원</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>금액(원) : 1530 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>일금 일천오백삼십원</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>금액 최대 자릿수 : 5자리</li>
+</ul>
+<h2>요구사항.011</h2>
+<p>입력받은 문장에서 숫자들을 찾아 그 합을 구하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>저는 홍길동입니다. 제 나이는 20살입니다. 몸무게는 72kg입니다. 전화번호는 010-2848-9372입니다. <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>문장에 존재하는 모든 숫자의 합은 55입니다.</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>연속된 숫자는 1자리씩 더할 것.</li>
+</ul>
+<h2>요구사항.012</h2>
+<p>연산식을 입력받아 실제 연산을 하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>10 + 2 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>10 + 2 = 12</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>2 * 7 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>2 + 7 = 14</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>2*7 <i class="far fa-keyboard"></i> //띄어쓰기 무관<br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>2 + 7 = 14</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>10 # 5 <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>연산자가 올바르지 않습니다.</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>10 + <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>피연산자가 부족합니다.</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>산술 연산자만 구현(+, -, *, /, %)</li>
+<li>연산식의 공백은 무관하게</li>
+<li>산술 연산자가 반드시 존재하는지 체크</li>
+<li>피연산자의 갯수가 2개인지 체크   </li>
+</ul>
+<h2>요구사항.013</h2>
+<p>아래의 문장에서 각 문자의 연속된 횟수를 알아내시오.</p>
+<p><em>문장</em></p>
+<pre><code>String txt = "안녕녕하하하하세요....홍홍홍홍길동입입니다다다다다..";</code></pre>
+<p><em>출력</em></p>
+<pre><code>원본 : 안녕녕하하하하세요....홍홍홍홍길동입입니다다다다다..
+'안' : 발견횟수 1회
+'녕' : 발견횟수 2회
+'하' : 발견횟수 4회
+'세' : 발견횟수 1회
+'요' : 발견횟수 1회
+'.' : 발견횟수 4회
+'홍' : 발견횟수 4회
+'길' : 발견횟수 1회
+'동' : 발견횟수 1회
+'입' : 발견횟수 2회
+'니' : 발견횟수 1회
+'다' : 발견횟수 5회
+'.' : 발견횟수 2회</code></pre>
+<!--
+## 요구사항.
+주어진 문자열에서 (사이의)공백을 제거 후 출력하시오.
+*입력*
+> 없음
+*출력*
+```
+원본 문자열 : "    하나    둘    셋    "
+결과 문자열 : "    하나둘셋    "
+```
+*도움*
+- 좌우에 있는 공백이 연속으로 몇개인지 알아내시오.
+--></div>			<textarea id="sourcecopy" style="width: 10px; height: 10px; position: absolute; left: -10000px;"></textarea>
+			
+		</div>
+	</section>
+
+
+	<script src="./asset/init.js.다운로드"></script>
+	<script>
+
+		$(".md.question h2").click(function () {
+			var sTop = $(this).offset().top;
+			//alert(sTop);
+
+			$('html, body').animate({
+				scrollTop: sTop - 20
+			}, 500);
+
+		});
+
+		
+
+		function setZero(num) {
+			if (num < 10) return "00" + num;
+			else if (num < 100) return "0" + num;
+			else "" + num;
+		}
+
+		//소스 클립보드에 복사하기
+		$(".md.question pre").dblclick(function(evt) {
+			if (evt.ctrlKey && evt.which == 1) {
+				//alert($(this).find("code").text());
+				$("#sourcecopy").val("");
+				$("#sourcecopy").val($(this).find("code").text()).select();
+				document.execCommand("copy");
+				//alert($("#sourcecopy").val());
+				alert('Source Copied');
+			}
+		});
+
+		$("a[href*='/question/question'").attr("target", "_blank");
+
+	</script>
+
+
+</body></html>
