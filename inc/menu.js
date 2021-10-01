@@ -19,12 +19,12 @@ list.forEach(function (item, index) {
 		'<div onclick="location.href=\'' +
 		item[0] +
 		'.html\';"' +
-		(location.href.endsWith(item[0] + '.html') ? 'style="opacity: 1;"' : '') +
+		(location.href.endsWith(item[0] + '.html')
+			? 'style="opacity: 1;"'
+			: 'style="opacity: .5;"') +
 		'><span class="title">' +
 		item[1] +
 		'</span></div>';
 });
 
 $('#jsmenu').append(temp);
-
-$('#jsmenu > div').css('opacity', '.5');
