@@ -10,7 +10,8 @@ let list = [
 	['array2', '다차원배열'],
 	['class1', '클래스'],
 	['class2', '클래스'],
-	['class3', '클래스']
+	['class3', '클래스'],
+	['class4', '클래스']
 ];
 
 let temp = '';

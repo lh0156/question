@@ -87,211 +87,69 @@
 	<section id="main" style="height: 2797px;">
 		<div id="left" style="height: 2847px;">
 			<i class="far fa-lightbulb" id="lefticon"></i>
-			<div style="clear: both;" class="mdlist">
-				<div style="clear: both;" class="mdlist">
-					<div onclick="location.href='operator.html';" style="opacity: .5;">
-						<span class="title">변수+자료형+형변환+입출력+연산자</span
-					></div>
-					<div onclick="location.href='method.html';" style="opacity: .5;">
-						<span class="title">메소드</span
-					></div>
-					<div onclick="location.href='datetime.html';" style="opacity: .5;">
-						<span class="title">날짜시간</span
-					></div>
-					<div onclick="location.href='conditional.html';" style="opacity: .5;">
-						<span class="title">조건문</span
-					></div>
-					<div onclick="location.href='iteration.html';" style="opacity: .5;">
-						<span class="title">반복문</span
-					></div>
-					<div onclick="location.href='iteration2.html';" style="opacity: .5;">
-						<span class="title">다중반복문</span
-					></div>
-					<div onclick="location.href='string.html';" style="opacity: .5;">
-						<span class="title">문자열</span
-					></div>
-					<div onclick="location.href='array.html';" style="opacity: .5;">
-						<span class="title">배열</span
-					></div>
-					<div onclick="location.href='array2.html';" style="opacity: 1;">
-						<span class="title">다차원배열</span
-					></div>
-				</div>
+			<div style="clear: both;" class="mdlist" id="jsmenu">
+				
 			</div>
 		</div>
 		
 		<!-- 우측 메인 영역 -->
-		<div id="right" style="height: 3200px;">
-			<div class="md question"><h1>클래스(생성자)</h1>
+		<div id="right" style="height: 2565px;">
+			<div class="md question"><h1>클래스</h1>
+
 <h2>요구사항.001</h2>
-<p>학생 클래스를 구현하시오.(생성자 오버로딩)</p>
+<p>Refrigerator 클래스와 Item 클래스를 설계하시오.</p>
 <p><em>조건</em></p>
-<p>클래스</p>
 <ul>
-<li>Student<ul>
-<li>학생 클래스</li>
-<li>상태<ul>
-<li>name<ul>
-<li>이름</li>
+<li>Refrigerator 객체의 정보<ul>
+<li>Item을 최대 100개까지 담을 수 있다.(멤버 변수 = Item 배열)</li>
 </ul>
 </li>
-<li>age<ul>
-<li>나이</li>
+<li>Refrigerator 객체의 사용<ul>
+<li>Item을 냉장고에 넣는다. void add(Item item);</li>
+<li>Item을 냉장고에서 꺼낸다. Item get(String name);</li>
+<li>냉장고에 있는 Item의 개수를 확인한다. int count();</li>
+<li>냉장고에 있는 Item을 확인한다. void listItem();</li>
 </ul>
 </li>
-<li>grade<ul>
-<li>학년</li>
-</ul>
-</li>
-<li>classNumber<ul>
-<li>반</li>
-</ul>
-</li>
-<li>number<ul>
-<li>번호</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>행동<ul>
-<li>public Student()<ul>
-<li>기본 생성자</li>
-<li>이름("미정"), 나이(0), 학년(0), 반(0), 번호(0)</li>
-</ul>
-</li>
-<li>public Student(String name, int age, int grade, int classNumber, int number)<ul>
-<li>생성자 오버로딩</li>
-</ul>
-</li>
-<li>public Student(String name, int age)<ul>
-<li>생성자 오버로딩</li>
-</ul>
-</li>
-<li>public Student(int grade, int classNumber, int number)<ul>
-<li>생성자 오버로딩</li>
-</ul>
-</li>
-<li>String info()<ul>
-<li>이름(나이 : 0세, 학년 : 0, 반 : 0, 번호 : 0)</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>Item 객체의 정보<ul>
+<li>식품명, 유통기한</li>
 </ul>
 </li>
 </ul>
 <p><em>코드</em></p>
-<pre><code>//학생 1
-Student s1 = new Student(); //기본 생성자 호출
-System.out.println(s1.info());
+<pre><code>Refrigerator r = new Refrigerator();
 
-//학생 2
-Student s2= new Student("홍길동", 13); //오버로딩 생성자 호출
-System.out.println(s2.info());
+Item item1 = new Item();
+item1.setName("김치");
+item1.setExpiration("2018-08-30");
+r.add(item1);//냉장고에 넣기
 
-//학생 3
-Student s3= new Student(3, 10, 30); //오버로딩 생성자 호출
-System.out.println(s3.info());
+Item item2 = new Item();
+item2.setName("깍두기");
+item2.setExpiration("2018-08-15");
+r.add(item2);//냉장고에 넣기
 
-//학생 4
-Student s4= new Student("아무개", 12, 1, 5, 11); //오버로딩 생성자 호출
-System.out.println(s4.info());</code></pre>
+Item item3 = new Item();
+item3.setName("멸치볶음");
+item3.setExpiration("2018-07-31");
+r.add(item3);//냉장고에 넣기
+
+Item item4 = r.get("깍두기");//냉장고에서 꺼내기
+System.out.printf("%s의 유통기한 : %s\n", item4.getName(), item4.getExpiration());
+
+System.out.printf("냉장고 안의 총 아이템 개수 : %d개\n", r.count());
+
+r.listItem();</code></pre>
 <p><em>출력</em></p>
-<pre><code>미정(나이 : 미정, 학년 : 미정, 반 : 미정, 번호 : 미정) //s1.info();
-홍길동(나이 : 13세, 학년 : 미정, 반 : 미정, 번호 : 미정) //s2.info();
-미정(나이 : 미정, 학년 : 3, 반 : 10, 번호 : 30) //s3.info();
-아무개(나이 : 12세, 학년 : 1, 반 : 5, 번호 : 11) //s4.info();</code></pre>
-<h2>요구사항.002</h2>
-<p>시간 클래스를 구현하시오.(생성자 오버로딩)</p>
-<p><em>조건</em></p>
-<p>클래스</p>
-<ul>
-<li>Time<ul>
-<li>시간 클래스</li>
-<li>상태<ul>
-<li>hour<ul>
-<li>시(0 이상 양의 정수)</li>
-</ul>
-</li>
-<li>minute<ul>
-<li>분(0 이상 양의 정수)</li>
-</ul>
-</li>
-<li>second<ul>
-<li>초(0 이상 양의 정수)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>행동<ul>
-<li>public Time()<ul>
-<li>기본 생성자</li>
-<li>시(0), 분(0), 초(0)</li>
-</ul>
-</li>
-<li>public Time(int hour, int minute, int second)<ul>
-<li>생성자 오버로딩</li>
-<li>hour : 시</li>
-<li>minute : 분</li>
-<li>second : 초</li>
-</ul>
-</li>
-<li>public Time(int minute, int second)<ul>
-<li>생성자 오버로딩</li>
-<li>minute : 분</li>
-<li>second : 초</li>
-</ul>
-</li>
-<li>public Time(int second)<ul>
-<li>생성자 오버로딩</li>
-<li>second : 초</li>
-</ul>
-</li>
-<li>String info()<ul>
-<li>2:30:45</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><em>코드</em></p>
-<pre><code>//시간 1
-Time t1 = new Time(); //기본 생성자 호출
-System.out.println(t1.info());
+<pre><code>'김치'를 냉장고에 넣었습니다. //r.add(item1);
+'깍두기'를 냉장고에 넣었습니다. //r.add(item2);
+'멸치볶음'를 냉장고에 넣었습니다. //r.add(item3);
+깍두기의 유통기한 : 2018-08-15
+냉장고 안의 총 아이템 개수 : 2개
 
-//시간 2
-Time t2 = new Time(2, 30, 45); //오버로딩 생성자 호출
-System.out.println(t2.info());
-
-//시간 3
-Time t3 = new Time(1, 70, 30); //오버로딩 생성자 호출
-System.out.println(t3.info());
-
-//시간 4
-Time t4 = new Time(30, 10); //오버로딩 생성자 호출
-System.out.println(t4.info());
-
-//시간 5
-Time t5 = new Time(90, 10); //오버로딩 생성자 호출
-System.out.println(t5.info());
-
-//시간 6
-Time t6 = new Time(50); //오버로딩 생성자 호출
-System.out.println(t6.info());
-
-//시간 7
-Time t7 = new Time(10000); //오버로딩 생성자 호출
-System.out.println(t7.info());</code></pre>
-<p><em>출력</em></p>
-<pre><code>0:0:0 //t1.info();
-2:30:45 //t2.info();
-2:10:30 //t3.info();
-0:30:10 //t4.info();
-1:30:10 //t5.info();
-0:0:50 //t6.info();
-2:46:40 //t7.info();</code></pre></div>			<textarea id="sourcecopy" style="width: 10px; height: 10px; position: absolute; left: -10000px;"></textarea>
+[냉장고 아이템 목록] //r.listItem();
+김치(2018-08-30) 
+멸치볶음(2018-07-31)</code></pre></div>			<textarea id="sourcecopy" style="width: 10px; height: 10px; position: absolute; left: -10000px;"></textarea>
 			
 		</div>
 	</section>
@@ -334,4 +192,5 @@ System.out.println(t7.info());</code></pre>
 	</script>
 
 
+<script src="inc/menu.js"></script>
 </body></html>
