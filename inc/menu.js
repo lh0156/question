@@ -12,8 +12,8 @@ let list = [
 	['class2_note', '클래스(객체생성,캡슐화)'],
 	['class3_bugles', '클래스(객체생성,캡슐화)'],
 	['class4_employee', '클래스(객체생성,캡슐화)'],
-	['class5_box', '클래스(객체멤버,배열멤버)']
-	// ['class6_refrigerator', '클래스(객체멤버,배열멤버)'],
+	['class5_box', '클래스(객체멤버,배열멤버)'],
+	['class6_refrigerator', '클래스(객체멤버,배열멤버)']
 	// ['class7_student', '클래스(생성자)'],
 	// ['class8_time', '클래스(생성자)'],
 	// ['class9_packer', '클래스(static)'],
