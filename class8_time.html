@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/question/?003 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+
+<title>Class::Question</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="Author" content="in">	<link rel="shortcut icon" href="http://localhost/favicon.ico">
+
+<link rel="stylesheet" href="./asset/bootstrap.min.css">
+<link rel="stylesheet" href="./asset/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./asset/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" href="./asset/main.css">
+
+<script src="./asset/jquery-1.12.4.min.js.다운로드"></script>
+<script src="./asset/bootstrap.min.js.다운로드"></script>
+<script src="./asset/function.js.다운로드"></script>
+	<style>
+		.qtable td { 
+			padding: 5px 10px; 
+			text-align: right; 
+		}
+		.qtable .black, .qtable2 .black { 
+			background-color: #efefef; 
+		}
+		.qtable .green, .qtable2 .green { 
+			background-color: #ddffee; 
+		}
+		.qtable .red, .qtable2 .red { 
+			background-color: #ffe3e3; 
+		}
+		.qtable2 td { 
+			padding: 2px 10px; text-align: center; 
+		}
+		.mdlist {
+			font-size: 14px;
+			margin-top: 100px;
+			padding-left: 15px;
+			text-align: right;
+			margin-bottom: 50px;
+		}
+
+		.mdlist div {
+			cursor: pointer;
+		}
+
+		.mdlist div.now {
+			opacity: 1;
+		}
+
+		.mdlist .no {
+			/* color: cornflowerblue; */
+			margin-right: 5px;
+		}
+
+		.mdlist .title {
+			font-size: 16px;
+		}
+		.datebar {
+			text-align: right;
+			border-top: 1px solid #ccc;
+			padding-right: 7px;
+			padding-top: 3px;
+			font-size: 12px;
+			margin: 0px auto;
+			margin-top: 30px;
+			margin-bottom: 100px;
+			color: #aaa;
+		}
+	</style>
+</head>
+<body>
+	<nav id="menu">
+    <ul id="menuleft">			
+        <li><i class="fas fa-home"></i> <a href="#!" target="_top">Home</a> <span></span></li>
+    </ul>
+    <ul id="menuright">			
+        <li><i class="fas fa-chalkboard-teacher"></i> <a href="#!" target="_top">Notice.알림</a></li>
+        <li><i class="fas fa-code"></i> <a href="h#!" target="_top">Snippet.코드</a></li>
+        <li><i class="far fa-lightbulb"></i> <a href="#!" target="_top">Question.문제</a></li>        
+        <li><i class="far fa-file-alt"></i> <a href="#!">File.자료실</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> <a href="#!" target="_top">Place.장소</a></li>
+    </ul>
+</nav>
+	<section id="main" style="height: 2797px;">
+		<div id="left" style="height: 2847px;">
+			<i class="far fa-lightbulb" id="lefticon"></i>
+			<div style="clear: both;" class="mdlist" id="jsmenu">
+				
+			</div>
+		</div>
+		
+		<!-- 우측 메인 영역 -->
+		<div id="right" style="height: 3200px;">
+			<div class="md question"><h1>클래스(생성자)</h1>
+
+<h2>요구사항.001</h2>
+<p>시간 클래스를 구현하시오.(생성자 오버로딩)</p>
+<p><em>조건</em></p>
+<p>클래스</p>
+<ul>
+<li>Time<ul>
+<li>시간 클래스</li>
+<li>상태<ul>
+<li>hour<ul>
+<li>시(0 이상 양의 정수)</li>
+</ul>
+</li>
+<li>minute<ul>
+<li>분(0 이상 양의 정수)</li>
+</ul>
+</li>
+<li>second<ul>
+<li>초(0 이상 양의 정수)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>행동<ul>
+<li>public Time()<ul>
+<li>기본 생성자</li>
+<li>시(0), 분(0), 초(0)</li>
+</ul>
+</li>
+<li>public Time(int hour, int minute, int second)<ul>
+<li>생성자 오버로딩</li>
+<li>hour : 시</li>
+<li>minute : 분</li>
+<li>second : 초</li>
+</ul>
+</li>
+<li>public Time(int minute, int second)<ul>
+<li>생성자 오버로딩</li>
+<li>minute : 분</li>
+<li>second : 초</li>
+</ul>
+</li>
+<li>public Time(int second)<ul>
+<li>생성자 오버로딩</li>
+<li>second : 초</li>
+</ul>
+</li>
+<li>String info()<ul>
+<li>2:30:45</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>코드</em></p>
+<pre><code>//시간 1
+Time t1 = new Time(); //기본 생성자 호출
+System.out.println(t1.info());
+
+//시간 2
+Time t2 = new Time(2, 30, 45); //오버로딩 생성자 호출
+System.out.println(t2.info());
+
+//시간 3
+Time t3 = new Time(1, 70, 30); //오버로딩 생성자 호출
+System.out.println(t3.info());
+
+//시간 4
+Time t4 = new Time(30, 10); //오버로딩 생성자 호출
+System.out.println(t4.info());
+
+//시간 5
+Time t5 = new Time(90, 10); //오버로딩 생성자 호출
+System.out.println(t5.info());
+
+//시간 6
+Time t6 = new Time(50); //오버로딩 생성자 호출
+System.out.println(t6.info());
+
+//시간 7
+Time t7 = new Time(10000); //오버로딩 생성자 호출
+System.out.println(t7.info());</code></pre>
+<p><em>출력</em></p>
+<pre><code>0:0:0 //t1.info();
+2:30:45 //t2.info();
+2:10:30 //t3.info();
+0:30:10 //t4.info();
+1:30:10 //t5.info();
+0:0:50 //t6.info();
+2:46:40 //t7.info();</code></pre></div>			<textarea id="sourcecopy" style="width: 10px; height: 10px; position: absolute; left: -10000px;"></textarea>
+			
+		</div>
+	</section>
+
+
+	<script src="./asset/init.js.다운로드"></script>
+	<script>
+
+		$(".md.question h2").click(function () {
+			var sTop = $(this).offset().top;
+			//alert(sTop);
+
+			$('html, body').animate({
+				scrollTop: sTop - 20
+			}, 500);
+
+		});
+
+
+		function setZero(num) {
+			if (num < 10) return "00" + num;
+			else if (num < 100) return "0" + num;
+			else "" + num;
+		}
+
+		//소스 클립보드에 복사하기
+		$(".md.question pre").dblclick(function(evt) {
+			if (evt.ctrlKey && evt.which == 1) {
+				//alert($(this).find("code").text());
+				$("#sourcecopy").val("");
+				$("#sourcecopy").val($(this).find("code").text()).select();
+				document.execCommand("copy");
+				//alert($("#sourcecopy").val());
+				alert('Source Copied');
+			}
+		});
+
+		$("a[href*='/question/question'").attr("target", "_blank");
+
+	</script>
+
+
+<script src="inc/menu.js"></script>
+</body></html>

@@ -121,17 +121,17 @@
 
 Item item1 = new Item();
 item1.setName("김치");
-item1.setExpiration("2018-08-30");
+item1.setExpiration("2021-08-30");
 r.add(item1);//냉장고에 넣기
 
 Item item2 = new Item();
 item2.setName("깍두기");
-item2.setExpiration("2018-08-15");
+item2.setExpiration("2021-08-15");
 r.add(item2);//냉장고에 넣기
 
 Item item3 = new Item();
 item3.setName("멸치볶음");
-item3.setExpiration("2018-07-31");
+item3.setExpiration("2021-07-31");
 r.add(item3);//냉장고에 넣기
 
 Item item4 = r.get("깍두기");//냉장고에서 꺼내기
@@ -144,12 +144,37 @@ r.listItem();</code></pre>
 <pre><code>'김치'를 냉장고에 넣었습니다. //r.add(item1);
 '깍두기'를 냉장고에 넣었습니다. //r.add(item2);
 '멸치볶음'를 냉장고에 넣었습니다. //r.add(item3);
-깍두기의 유통기한 : 2018-08-15
-냉장고 안의 총 아이템 개수 : 2개
+
+깍두기의 유통기한 : 2021-08-15 //printf();
+냉장고 안의 총 아이템 개수 : 2개 //printf();
 
 [냉장고 아이템 목록] //r.listItem();
-김치(2018-08-30) 
-멸치볶음(2018-07-31)</code></pre></div>			<textarea id="sourcecopy" style="width: 10px; height: 10px; position: absolute; left: -10000px;"></textarea>
+김치(2021-08-30) 
+멸치볶음(2021-07-31)</code></pre>
+
+
+<p><em>기초코드</em></p>
+<pre><code>class Refrigerator {
+	private Item[] items = new Item[100];
+
+	public void add(Item item) {
+	}
+	
+	public Item get(String name) {
+	}
+
+	public int count() {
+	}
+
+	public void listItem() {
+	}
+}
+
+class Item {
+	private String name;
+	private Calendar expiration;
+}</code></pre>
+</div>			<textarea id="sourcecopy" style="width: 10px; height: 10px; position: absolute; left: -10000px;"></textarea>
 			
 		</div>
 	</section>

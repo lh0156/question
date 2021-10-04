@@ -87,36 +87,8 @@
 	<section id="main" style="height: 2797px;">
 		<div id="left" style="height: 2847px;">
 			<i class="far fa-lightbulb" id="lefticon"></i>
-			<div style="clear: both;" class="mdlist">
-				<div style="clear: both;" class="mdlist">
-					<div onclick="location.href='operator.html';" style="opacity: .5;">
-						<span class="title">변수+자료형+형변환+입출력+연산자</span
-					></div>
-					<div onclick="location.href='method.html';" style="opacity: .5;">
-						<span class="title">메소드</span
-					></div>
-					<div onclick="location.href='datetime.html';" style="opacity: .5;">
-						<span class="title">날짜시간</span
-					></div>
-					<div onclick="location.href='conditional.html';" style="opacity: .5;">
-						<span class="title">조건문</span
-					></div>
-					<div onclick="location.href='iteration.html';" style="opacity: .5;">
-						<span class="title">반복문</span
-					></div>
-					<div onclick="location.href='iteration2.html';" style="opacity: .5;">
-						<span class="title">다중반복문</span
-					></div>
-					<div onclick="location.href='string.html';" style="opacity: .5;">
-						<span class="title">문자열</span
-					></div>
-					<div onclick="location.href='array.html';" style="opacity: .5;">
-						<span class="title">배열</span
-					></div>
-					<div onclick="location.href='array2.html';" style="opacity: 1;">
-						<span class="title">다차원배열</span
-					></div>
-				</div>
+			<div style="clear: both;" class="mdlist" id="jsmenu">
+				
 			</div>
 		</div>
 		
@@ -201,97 +173,7 @@ System.out.println(s4.info());</code></pre>
 홍길동(나이 : 13세, 학년 : 미정, 반 : 미정, 번호 : 미정) //s2.info();
 미정(나이 : 미정, 학년 : 3, 반 : 10, 번호 : 30) //s3.info();
 아무개(나이 : 12세, 학년 : 1, 반 : 5, 번호 : 11) //s4.info();</code></pre>
-<h2>요구사항.002</h2>
-<p>시간 클래스를 구현하시오.(생성자 오버로딩)</p>
-<p><em>조건</em></p>
-<p>클래스</p>
-<ul>
-<li>Time<ul>
-<li>시간 클래스</li>
-<li>상태<ul>
-<li>hour<ul>
-<li>시(0 이상 양의 정수)</li>
-</ul>
-</li>
-<li>minute<ul>
-<li>분(0 이상 양의 정수)</li>
-</ul>
-</li>
-<li>second<ul>
-<li>초(0 이상 양의 정수)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>행동<ul>
-<li>public Time()<ul>
-<li>기본 생성자</li>
-<li>시(0), 분(0), 초(0)</li>
-</ul>
-</li>
-<li>public Time(int hour, int minute, int second)<ul>
-<li>생성자 오버로딩</li>
-<li>hour : 시</li>
-<li>minute : 분</li>
-<li>second : 초</li>
-</ul>
-</li>
-<li>public Time(int minute, int second)<ul>
-<li>생성자 오버로딩</li>
-<li>minute : 분</li>
-<li>second : 초</li>
-</ul>
-</li>
-<li>public Time(int second)<ul>
-<li>생성자 오버로딩</li>
-<li>second : 초</li>
-</ul>
-</li>
-<li>String info()<ul>
-<li>2:30:45</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><em>코드</em></p>
-<pre><code>//시간 1
-Time t1 = new Time(); //기본 생성자 호출
-System.out.println(t1.info());
-
-//시간 2
-Time t2 = new Time(2, 30, 45); //오버로딩 생성자 호출
-System.out.println(t2.info());
-
-//시간 3
-Time t3 = new Time(1, 70, 30); //오버로딩 생성자 호출
-System.out.println(t3.info());
-
-//시간 4
-Time t4 = new Time(30, 10); //오버로딩 생성자 호출
-System.out.println(t4.info());
-
-//시간 5
-Time t5 = new Time(90, 10); //오버로딩 생성자 호출
-System.out.println(t5.info());
-
-//시간 6
-Time t6 = new Time(50); //오버로딩 생성자 호출
-System.out.println(t6.info());
-
-//시간 7
-Time t7 = new Time(10000); //오버로딩 생성자 호출
-System.out.println(t7.info());</code></pre>
-<p><em>출력</em></p>
-<pre><code>0:0:0 //t1.info();
-2:30:45 //t2.info();
-2:10:30 //t3.info();
-0:30:10 //t4.info();
-1:30:10 //t5.info();
-0:0:50 //t6.info();
-2:46:40 //t7.info();</code></pre></div>			<textarea id="sourcecopy" style="width: 10px; height: 10px; position: absolute; left: -10000px;"></textarea>
+</div>			<textarea id="sourcecopy" style="width: 10px; height: 10px; position: absolute; left: -10000px;"></textarea>
 			
 		</div>
 	</section>
@@ -334,4 +216,5 @@ System.out.println(t7.info());</code></pre>
 	</script>
 
 
+<script src="inc/menu.js"></script>
 </body></html>
