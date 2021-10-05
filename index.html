@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/question/?003 -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	
@@ -43,7 +44,6 @@
 
 		.mdlist div {
 			cursor: pointer;
-			opacity: .5;
 		}
 
 		.mdlist div.now {
@@ -72,7 +72,6 @@
 	</style>
 </head>
 <body>
-
 	<nav id="menu">
     <ul id="menuleft">			
         <li><i class="fas fa-home"></i> <a href="#!" target="_top">Home</a> <span></span></li>
@@ -87,17 +86,15 @@
 </nav>
 	<section id="main" style="height: 2797px;">
 		<div id="left" style="height: 2847px;">
-			<i class="far fa-lightbulb" id="lefticon" onclick="location.href=&#39;questionpick.php&#39;;"></i>
-			<div style="clear: both;" class="mdlist">
+			<i class="far fa-lightbulb" id="lefticon"></i>
+			<div style="clear: both;" class="mdlist" id="jsmenu">
+				
 			</div>
 		</div>
 		
 		<!-- 우측 메인 영역 -->
 		<div id="right" style="height: 2847px;">
 			
-         <h1>Java</h1>
-
-         <a href="operator.html">연산자</a>
 
 		</div>
 				
@@ -117,12 +114,6 @@
 
 		});
 
-		//요구사항 번호 매기기
-		var no = 1;
-		$(".md.question h2").each(function(index, item) {
-			$(item).text($(item).text() + setZero(no));
-			no+=1;
-		});
 
 		function setZero(num) {
 			if (num < 10) return "00" + num;
@@ -147,4 +138,5 @@
 	</script>
 
 
+<script src="inc/menu.js"></script>
 </body></html>
