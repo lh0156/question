@@ -17,7 +17,10 @@ let list = [
 	['class7_student', '클래스(생성자)'],
 	['class8_time', '클래스(생성자)'],
 	['class9_packer', '클래스(static)'],
-	['class10_barista', '클래스(static)']
+	['class10_barista', '클래스(static)'],
+	['scanner1', '스캐너'],
+	['scanner2', '스캐너']
+	// ['exception', '예외처리'],
 ];
 
 let temp = '';
