@@ -39,3 +39,9 @@ list.forEach(function (item, index) {
 });
 
 $('#jsmenu').append(temp);
+
+$(window).keydown(function (evt) {
+	if (evt.ctrlKey && evt.shiftKey && evt.keyCode == 90) {
+		$('#menuleft, #left').toggle();
+	}
+});
