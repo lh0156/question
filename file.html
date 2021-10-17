@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/question/?003 -->
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>Class::Question</title>
+
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		/>
+		<meta name="Author" content="in" />
+		<link rel="shortcut icon" href="http://localhost/favicon.ico" />
+
+		<link rel="stylesheet" href="./asset/bootstrap.min.css" />
+		<link rel="stylesheet" href="./asset/bootstrap-theme.min.css" />
+		<link
+			rel="stylesheet"
+			href="./asset/all.css"
+			integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./asset/main.css" />
+
+		<script src="./asset/jquery-1.12.4.min.js.다운로드"></script>
+		<script src="./asset/bootstrap.min.js.다운로드"></script>
+		<script src="./asset/function.js.다운로드"></script>
+		<style>
+			.qtable td {
+				padding: 5px 10px;
+				text-align: right;
+			}
+			.qtable .black,
+			.qtable2 .black {
+				background-color: #efefef;
+			}
+			.qtable .green,
+			.qtable2 .green {
+				background-color: #ddffee;
+			}
+			.qtable .red,
+			.qtable2 .red {
+				background-color: #ffe3e3;
+			}
+			.qtable2 td {
+				padding: 2px 10px;
+				text-align: center;
+			}
+			.mdlist {
+				font-size: 14px;
+				margin-top: 100px;
+				padding-left: 15px;
+				text-align: right;
+				margin-bottom: 50px;
+			}
+
+			.mdlist div {
+				cursor: pointer;
+			}
+
+			.mdlist div.now {
+				opacity: 1;
+			}
+
+			.mdlist .no {
+				/* color: cornflowerblue; */
+				margin-right: 5px;
+			}
+
+			.mdlist .title {
+				font-size: 16px;
+			}
+			.datebar {
+				text-align: right;
+				border-top: 1px solid #ccc;
+				padding-right: 7px;
+				padding-top: 3px;
+				font-size: 12px;
+				margin: 0px auto;
+				margin-top: 30px;
+				margin-bottom: 100px;
+				color: #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<nav id="menu">
+			<ul id="menuleft">
+				<li>
+					<i class="fas fa-home"></i> <a href="#!" target="_top">Home</a>
+					<span></span>
+				</li>
+			</ul>
+			<ul id="menuright">
+				<li>
+					<i class="fas fa-chalkboard-teacher"></i>
+					<a href="#!" target="_top">Notice.알림</a>
+				</li>
+				<li>
+					<i class="fas fa-code"></i>
+					<a href="h#!" target="_top">Snippet.코드</a>
+				</li>
+				<li>
+					<i class="far fa-lightbulb"></i>
+					<a href="#!" target="_top">Question.문제</a>
+				</li>
+				<li>
+					<i class="far fa-file-alt"></i> <a href="#!">File.자료실</a>
+				</li>
+				<li>
+					<i class="fas fa-map-marker-alt"></i>
+					<a href="#!" target="_top">Place.장소</a>
+				</li>
+			</ul>
+		</nav>
+		<section id="main" style="height: 2797px">
+			<div id="left" style="height: 2847px">
+				<i class="far fa-lightbulb" id="lefticon"></i>
+				<div style="clear: both" class="mdlist">
+					<div style="clear: both" class="mdlist" id="jsmenu"></div>
+				</div>
+			</div>
+			<!-- 우측 메인 영역 -->
+		<div id="right" style="height: 4455px;">
+			<div class="md question"><h1>파일 디렉토리 조작</h1>
+<h2>요구사항.001</h2>
+<p>특정 파일의 경로를 입력받아 정보를 출력하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>파일 경로 : D:\class\java\file\test.txt <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>파일명 : test.txt 
+종류 : txt 파일 
+파일 크기 : 45B </code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>파일 크기 단위 변환 출력(소수이하 1자리까지) : B, KB, MB, GB, TB</li>
+</ul>
+<h2>요구사항.002</h2>
+<p>특정 폴더의 특정 파일(확장자)만을 출력하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>폴더 선택 : D:\class\java\editplus <i class="far fa-keyboard"></i><br>
+파일 확장자 : java <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>Ex01_Basic.java
+Ex02.java
+Ex03_Variable.JAVA
+..
+Ex45_Random.java</code></pre>
+<p><em>입력</em></p>
+<blockquote>
+<p>폴더 선택 : D:\class\java\editplus <i class="far fa-keyboard"></i><br>
+파일 확장자 : txt <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>필기.txt
+다시 정리할 것.TXT
+북마크.txt
+..</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>확장자 대소문자 구분없이</li>
+</ul>
+<h2>요구사항.003</h2>
+<p>특정 파일을 이동하고, 중복되는 경우를 처리하시오.</p>
+<p><em>입력</em></p>
+<blockquote>
+<p>파일 이동을 실행합니다.<br>
+같은 이름을 가지는 파일이 이미 존재합니다. 덮어쓸까요?(y/n) y <i class="far fa-keyboard"></i><br></p>
+</blockquote>
+<p><em>출력</em></p>
+<pre><code>y. 파일을 덮어썼습니다.
+n. 작업을 취소합니다.</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>D:\class\java\file\AAA\test.txt → D:\class\java\file\BBB\test.txt 로 이동하는 것이 목적</li>
+<li>BBB 폴더에 이미 test.txt가 있을 경우 덮어쓰거나(y) 작업을 취소(n) 하시오.</li>
+</ul>
+<h2>요구사항.004</h2>
+<p>음악 파일이 100개 있다. 파일명 앞에 일련 번호를 붙이시오.</p>
+<p><em>리소스</em></p>
+<ul>
+<li>음악 파일</li>
+<li><a href="%ED%8C%8C%EC%9D%BC_%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC_%EB%AC%B8%EC%A0%9C.zip" target="_blank">파일 다운로드</a></li>
+</ul>
+<p><em>출력</em></p>
+<pre><code>[001]1도 없어 - Apink (에이핑크).mp3 
+[002]11 (Prod. 다이나믹듀오) - Wanna One (워너원) - 남바완.mp3 
+[003]134340 - 방탄소년단.mp3
+..
+[100]花요일 (Blooming Day) - EXO-CBX (첸백시).mp3</code></pre>
+<h2>요구사항.005</h2>
+<p>이미지 파일이 확장자별로 있다. 확장자별로 파일이 몇개 있는지 세시오.</p>
+<p><em>리소스</em></p>
+<ul>
+<li>확장자별 카운트</li>
+<li><a href="%ED%8C%8C%EC%9D%BC_%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC_%EB%AC%B8%EC%A0%9C.zip" target="_blank">파일 다운로드</a></li>
+</ul>
+<p><em>출력</em></p>
+<pre><code>*.gif : 10개 
+*.jpg : 5개 
+*.png : 3개 </code></pre>
+<p><em>추가조건</em></p>
+<ul>
+<li>mouse.bmp 추가를 하면.. 소스 수정 없이도 *.bmp : 1개 출력이 되게 하시오. </li>
+</ul>
+<h2>요구사항.006</h2>
+<p>파일의 크기가 0byte인 파일만 삭제하시오.</p>
+<p><em>리소스</em></p>
+<ul>
+<li>파일 제거</li>
+<li><a href="%ED%8C%8C%EC%9D%BC_%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC_%EB%AC%B8%EC%A0%9C.zip" target="_blank">파일 다운로드</a></li>
+</ul>
+<p><em>출력</em></p>
+<pre><code>총 34개의 파일을 삭제했습니다. </code></pre>
+<h2>요구사항.007</h2>
+<p>'MusicA와 MusicB 폴더를 서로 비교해서 양쪽 폴더에 모두 존재하는 파일만을 출력하시오.(중복 파일 알아내기)</p>
+<p><em>리소스</em></p>
+<ul>
+<li>동일 파일</li>
+<li><a href="%ED%8C%8C%EC%9D%BC_%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC_%EB%AC%B8%EC%A0%9C.zip" target="_blank">파일 다운로드</a></li>
+</ul>
+<p><em>출력</em></p>
+<pre><code>BAAM - 모모랜드 (MOMOLAND).mp3 
+Dejavu - 볼빨간사춘기.mp3 
+SoulMate (Feat. 아이유) - 지코 (ZICO).mp3 
+..</code></pre>
+<p><em>추가조건</em></p>
+<ul>
+<li>MusicA에만 존재하는 파일을 출력하시오. </li>
+<li>MusicB에만 존재하는 파일을 출력하시오. </li>
+</ul>
+<h2>요구사항.008</h2>
+<p>'delete' 폴더를 삭제하시오.</p>
+<p><em>리소스</em></p>
+<ul>
+<li>폴더 삭제 &gt; delete</li>
+<li><a href="%ED%8C%8C%EC%9D%BC_%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC_%EB%AC%B8%EC%A0%9C.zip" target="_blank">파일 다운로드</a></li>
+</ul>
+<p><em>출력</em></p>
+<pre><code>폴더를 삭제했습니다. 
+삭제된 폴더는 3개이고, 파일은 6개입니다. </code></pre>
+<p><em>도움</em></p>
+<ul>
+<li>재귀 메소드</li>
+</ul>
+<h2>요구사항.009</h2>
+<p>폴더의 위치와 상관없이 모든 폴더 내의 파일들을 찾아 한번에 크기를 비교하고, 크기가 큰 순으로 정렬하시오.</p>
+<p><em>리소스</em></p>
+<ul>
+<li>크기 정렬</li>
+<li><a href="%ED%8C%8C%EC%9D%BC_%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC_%EB%AC%B8%EC%A0%9C.zip" target="_blank">파일 다운로드</a></li>
+</ul>
+<p><em>출력</em></p>
+<pre><code>[파일명]    [크기]   [파일이 들어있는 폴더]
+aaa.exe    57KB    AAA 
+bbb.exe    50KB    BBB 
+ccc.dat    41KB    AAA 
+ddd.txt    20KB    CCC 
+..</code></pre>
+<p><em>도움</em></p>
+<ul>
+<li>버블 정렬 알고리즘 검색</li>
+</ul>
+<h2>요구사항.010</h2>
+<p>각 파일들을 아래의 조건에 따라 폴더를 나누어 정렬(이동)하시오.</p>
+<p><em>리소스</em></p>
+<ul>
+<li>직원</li>
+<li><a href="%ED%8C%8C%EC%9D%BC_%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC_%EB%AC%B8%EC%A0%9C.zip" target="_blank">파일 다운로드</a></li>
+</ul>
+<p><em>출력</em></p>
+<pre><code>분류가 완료되었습니다.</code></pre>
+<p><em>조건</em></p>
+<ul>
+<li>1차 : 직원 이름으로 폴더 생성</li>
+<li>2차 : 년도별로 폴더 생성</li>
+<li>3차 : 각 파일을 직원 &gt; 년도 폴더에 이동</li>
+</ul>
+<!--
+## 요구사항.
+*입력*
+> 
+*출력*
+```
+```
+*조건*
+- 
+*추가 조건*
+- 
+--></div>
+<textarea
+id="sourcecopy"
+style="
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: -10000px;
+"
+></textarea>
+</div>
+</section>
+
+<script src="./asset/init.js.다운로드"></script>
+<script>
+$('.md.question h2').click(function () {
+var sTop = $(this).offset().top;
+//alert(sTop);
+
+$('html, body').animate(
+{
+	scrollTop: sTop - 20
+},
+500
+);
+});
+
+function setZero(num) {
+if (num < 10) return '00' + num;
+else if (num < 100) return '0' + num;
+else '' + num;
+}
+
+//소스 클립보드에 복사하기
+$('.md.question pre').dblclick(function (evt) {
+if (evt.ctrlKey && evt.which == 1) {
+//alert($(this).find("code").text());
+$('#sourcecopy').val('');
+$('#sourcecopy').val($(this).find('code').text()).select();
+document.execCommand('copy');
+//alert($("#sourcecopy").val());
+alert('Source Copied');
+}
+});
+
+$("a[href*='/question/question'").attr('target', '_blank');
+</script>
+
+<script src="inc/menu.js"></script>
+</body>
+</html>
