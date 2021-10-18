@@ -21,7 +21,8 @@ let list = [
 	['scanner', '스캐너'],
 	['arraylist', 'ArrayList'],
 	['hashmap', 'HashMap'],
-	['adt', 'Stack,Queue']
+	['adt', 'Stack,Queue'],
+	['file', 'File,Directory']
 	// ['exception', '예외처리'],
 ];
 
