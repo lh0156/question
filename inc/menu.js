@@ -22,7 +22,7 @@ let list = [
 	['arraylist', 'ArrayList'],
 	['hashmap', 'HashMap'],
 	['adt', 'Stack,Queue'],
-	['file', 'File,Directory']
+	//['file', 'File,Directory']
 	// ['exception', '예외처리'],
 ];
 
