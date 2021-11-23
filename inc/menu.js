@@ -20,7 +20,10 @@ let list = [
 	['class10_barista', '클래스(static)'],
 	['scanner', '스캐너'],
 	['arraylist', 'ArrayList'],
-	['hashmap', 'HashMap']
+	['hashmap', 'HashMap'],
+	['adt', 'Stack,Queue'],
+	['file', 'File,Directory'],
+	['fileio', 'File Read&Write']
 	// ['exception', '예외처리'],
 ];
 
