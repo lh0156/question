@@ -23,8 +23,9 @@ let list = [
 	['hashmap', 'HashMap'],
 	['adt', 'Stack,Queue'],
 	['file', 'File,Directory'],
-	['fileio', 'File Read&Write']
+	['fileio', 'File Read&Write'],
 	// ['exception', '예외처리'],
+	['dbproject', '데이터베이스 요구사항']
 ];
 
 let temp = '';
