@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/question/?003 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	
+
+<title>Class::Question</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="Author" content="in">	<link rel="shortcut icon" href="http://localhost/favicon.ico">
+
+<link rel="stylesheet" href="../asset/bootstrap.min.css">
+<link rel="stylesheet" href="../asset/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../asset/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" href="../asset/main.css">
+
+<script src="../asset/jquery-1.12.4.min.js.다운로드"></script>
+<script src="../asset/bootstrap.min.js.다운로드"></script>
+<script src="../asset/function.js.다운로드"></script>
+	<style>
+		.qtable td { 
+			padding: 5px 10px; 
+			text-align: right; 
+		}
+		.qtable .black, .qtable2 .black { 
+			background-color: #efefef; 
+		}
+		.qtable .green, .qtable2 .green { 
+			background-color: #ddffee; 
+		}
+		.qtable .red, .qtable2 .red { 
+			background-color: #ffe3e3; 
+		}
+		.qtable2 td { 
+			padding: 2px 10px; text-align: center; 
+		}
+		.mdlist {
+			font-size: 14px;
+			margin-top: 100px;
+			padding-left: 15px;
+			text-align: right;
+			margin-bottom: 50px;
+		}
+
+		.mdlist div {
+			cursor: pointer;
+		}
+
+		.mdlist div.now {
+			opacity: 1;
+		}
+
+		.mdlist .no {
+			/* color: cornflowerblue; */
+			margin-right: 5px;
+		}
+
+		.mdlist .title {
+			font-size: 16px;
+		}
+		.datebar {
+			text-align: right;
+			border-top: 1px solid #ccc;
+			padding-right: 7px;
+			padding-top: 3px;
+			font-size: 12px;
+			margin: 0px auto;
+			margin-top: 30px;
+			margin-bottom: 100px;
+			color: #aaa;
+		}
+		pre {
+			font-size: 14px;
+			line-height: 2em;
+			overflow: auto;
+			white-space: pre-wrap;
+		}   
+
+	</style>
+</head>
+<body>
+	<nav id="menu">
+    <ul id="menuleft">			
+        <li><i class="fas fa-home"></i> <a href="#!" target="_top">Home</a> <span></span></li>
+    </ul>
+    <ul id="menuright">			
+        <li><i class="fas fa-chalkboard-teacher"></i> <a href="#!" target="_top">Notice.알림</a></li>
+        <li><i class="fas fa-code"></i> <a href="h#!" target="_top">Snippet.코드</a></li>
+        <li><i class="far fa-lightbulb"></i> <a href="#!" target="_top">Question.문제</a></li>        
+        <li><i class="far fa-file-alt"></i> <a href="#!">File.자료실</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> <a href="#!" target="_top">Place.장소</a></li>
+    </ul>
+</nav>
+	<section id="main" style="height: 2797px;">
+		<div id="left" style="height: 2847px;">
+			<i class="fas fa-question" id="lefticon"></i>
+			<div style="clear: both;" class="mdlist" id="jsmenu">
+				
+			</div>
+		</div>
+		
+		<!-- 우측 메인 영역 -->
+		<div id="right" style="height: 2847px;">
+<pre>
+
+# 통신 프로토콜
+- 컴퓨터 내부/외부에서 데이터의 교환방식을 정의하는 규칙이다.
+- 통신 프로토콜은 신호 체계, 인증 기능을 포함 할 수 있다.
+- 통신 프로토콜은 TCP/UDP 이외에 여러 종류의 프로토콜이 있다.
+- 통신 프로토콜은 오류 감지 및 수정 기능을 포함 할 수 있다.
+
+
+# HTTP
+- 웹 서버 및 웹 브라우저 상호 간의 데이터 전송을 위한 프로토콜
+
+
+# Middleware, 미들웨어
+- 컴퓨터 제작 회사가 사용자의 특정한 요구대로 만들어 제공하는 프로그램으로, 운영 체제와 응용 소프트웨어의 중간에서 조정과 중개의 역할을 수행하는 소프트웨어
+
+
+# OSI 7Layer
+7. 응용계층
+  - 마지막 응용 계층은 사용자가 네트워크에 접근할 수 있도록 인터페이스를 제공하는 계층
+6. 표현계층 
+  - 데이터 표현방식, 상이한 부호체계 간의 변화에 대해 규정한다.
+  - 인코딩/디코딩, 압축/해제, 암호화/복호화 등의 역할을 수행한다.
+5. 세션계층 
+  - 응용 프로그램간의 논리적인 연결(세션) 생성 및 제어를 담당한다.
+  - TCP/IP 세션을 만들고 없애는 역할
+4. 전송계층 
+  - 종단간 신뢰성 있는 데이터 전송을 담당한다. (End-To-End Reliable Delivery)
+  - 종단(Host)의 구체적인 목적지(Process)까지 데이터가 도달할 수 있도록 한다. (Process-To-Process Communication)
+3. 네트워크 계층 
+  - 종단간 전송을 위한 경로 설정을 담당한다. (End-To-End 혹은 Host-To-Host Delivery)
+  - 호스트로 도달하기 위한 최적의 경로를 라우팅 알고리즘을 통해 선택하고 제어한다.
+2. 데이터링크 
+  - 인접한 노드간의 신뢰성 있는 데이터(단위 : 프레임) 전송을 제어(Nod-To-Nod Delivery)
+  - 네트워크 카드의 MAC(Media Access Control)주소를 통해 목적지를 찾아간다.
+1. 물리계층
+  - 물리적인 장치의 전기적, 전자적 연결에 대한 명세
+  - 디지털 데이터를 아날로그적인 전기적 신호로 변환하여 물리적인 전송이 가능케 한다.
+
+
+# SQL
+- 관계형 데이터베이스 관리 시스템(RDBMS)의 데이터를 관리하기 위해 설계된 언어
+
+
+# MVC 패턴
+- 사용자 인터페이스로부터 비즈니스 로직을 분리하여 애플리케이션의 시각적 요소나 그 이면에서 실행되는 비즈니스 로직을 서로 영향 없이 쉽게 고칠 수 있는 애플리케이션을 만들 수 있는 디자인 패턴
+
+
+# 식별관계
+- 부모테이블의 PK를 자식 테이블에서 PK컬럼으로 참조하는 테이블 관계
+
+
+# truncate
+- 테이블의 레코드를 모두 삭제한다.
+
+
+# delete
+- 테이블의 원하는 레코드를 삭제한다.
+
+
+# 비식별 관계
+- 부모테이블의 PK를 자식 테이블에서 일반컬럼으로 참조하는 테이블 관계
+
+
+# 3 Way Handshake
+- TCP/IP프로토콜을 이용해서 통신을 하는 응용프로그램이 데이터를 전송하기 전에 먼저 정확한 전송을 보장하기 위해 상대방 컴퓨터와 연결 확립하는 과정
+
+
+# 내부/외부 통신망의 접속을 위한 네트워크 장비에 속하는 것들은 라우터(Router), 허브(Hub), 리피터(Repeater), 랜카드(Netword Interface Card) 등이 있다.
+
+
+# 정규화
+- 데이터베이스 테이블 간에 중복된 데이터를 최소화하여, 무결성(Integrity)를 유지할 수 있으며, DB의 저장 용량을 줄이기 위해 하는 작업
+
+
+# ERD
+- DBMS 테이블의 관계를 도식화한 Diagram
+
+</pre>
+			
+
+		</div>				
+	</section>
+
+
+	<script src="../asset/init.js.다운로드"></script>
+	<script>
+
+		$(".md.question h2").click(function () {
+			var sTop = $(this).offset().top;
+			//alert(sTop);
+
+			$('html, body').animate({
+				scrollTop: sTop - 20
+			}, 500);
+
+		});
+
+
+		function setZero(num) {
+			if (num < 10) return "00" + num;
+			else if (num < 100) return "0" + num;
+			else "" + num;
+		}
+
+		//소스 클립보드에 복사하기
+		$(".md.question pre").dblclick(function(evt) {
+			if (evt.ctrlKey && evt.which == 1) {
+				//alert($(this).find("code").text());
+				$("#sourcecopy").val("");
+				$("#sourcecopy").val($(this).find("code").text()).select();
+				document.execCommand("copy");
+				//alert($("#sourcecopy").val());
+				alert('Source Copied');
+			}
+		});
+
+		$("a[href*='/question/question'").attr("target", "_blank");
+
+	</script>
+
+
+<script src="../inc/ncsmenu.js"></script>
+</body></html>
