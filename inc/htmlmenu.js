@@ -3,7 +3,8 @@ let list = [
 	['paragraph', '문단,<p>'],
 	['body', '본문<body>'],
 	['hr', '수평선<hr>'],
-	['style', '스타일']
+	['style', '스타일'],
+	['list', '리스트']
 	//['', ''],
 ];
 
