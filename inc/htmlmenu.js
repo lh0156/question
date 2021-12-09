@@ -1,6 +1,8 @@
 let list = [
 	['heading', '제목,<hn>'],
-	['method', '메소드'],
+	['paragraph', '문단,<p>'],
+	['body', '본문<body>']
+	//['', ''],
 ];
 
 let temp = '';
