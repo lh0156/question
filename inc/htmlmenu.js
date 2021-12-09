@@ -1,7 +1,9 @@
 let list = [
 	['heading', '제목,<hn>'],
 	['paragraph', '문단,<p>'],
-	['body', '본문<body>']
+	['body', '본문<body>'],
+	['hr', '수평선<hr>'],
+	['style', '스타일']
 	//['', ''],
 ];
 
