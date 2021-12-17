@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/main.css">
+    <title>Document</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			background-color: #B3C5DC;
+		}
+
+		#main {
+			width: 900px;
+			margin: 0px auto;
+			height: 1000px;
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		#main > #title {
+			margin: 0;
+			padding: 0;
+		}
+		#title {
+			font-variant: small-caps;
+		}
+		#title small {
+			color: #888;
+			font-size: .7em;
+		}
+		#left {
+			width: 250px;
+			background-color: #344F71 ;
+			float: left;
+			height: 1200px;
+		}
+		#right {
+			width: 610px;
+			background-color: #FFFEFF ;
+			float: left;
+			padding: 20px;
+			height: 1160px;
+		}
+		#pic {
+			background-color: rgba(255,255,225,.3);
+			border: 5px dashed rgba(255,255,225,.5);
+			width: 150px;
+			height: 140px;
+			margin: 30px auto;
+			text-align: center;
+			padding-top: 10px;
+		}
+		#name {
+			font-size: 1.7em;
+			font-family: Arial Black;
+			font-weight: bold;
+			letter-spacing: -1px;
+			color: #F7F7F7;
+			text-align: center;
+		}
+		#info {
+			width: 195px;
+			margin: 0px auto;
+			margin-top: 15px;
+			color: #F7F7F7;
+			font-size: 14px;
+		}
+		#birthday {
+			margin-top: 100px;
+		}
+		.desc {
+			color: #F7F7F7;
+			font-size: 14px;
+			font-weight: bold;
+			font-style: italic;
+			padding: 20px 25px 10px 25px;
+			border-bottom: 1px solid #F7F7F7;
+		}
+		#right h1, #right h2 {
+			color: #666;
+		}
+		#right h2 {
+			border-left: 10px solid rgba(52,79,113,.8);
+			padding-left: 15px;
+		}
+		#right ul li {
+			font-size: 14px;
+			color: #888;
+			text-align: justify;
+			margin-right: 20px;
+		}
+		#copyright {
+			border-top: 1px dashed  rgba(52,79,113,.4);
+			padding-top: 10px;
+			margin-top: 70px;
+			font-size: 14px;
+			color: #888;
+		}
+
+
+		#color {
+			position: absolute; left: 930px; top: 20px; font-size: 14px; color: white;
+			width: 170px;
+		}
+		#color > div {
+			border-bottom: 1px solid white;
+			margin-bottom: 5px;
+		}
+		.prj {
+			display: none;
+			border: 1px dashed #5D728D;
+			padding: 5px;
+			width: 200px;
+			margin: 5px;
+		}
+		.prj.left {
+			margin-right: 30px;
+			float: left;
+		}
+		.prj.right {
+			margin-right: 20px;
+			margin-left: 30px;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<header class="question">
+		<h1>CSS <small>아래와 같이 구현하시오.</small></h1>
+		<div>Hint: 
+		</div>
+	</header>
+	
+	<div id="main">
+		<div id="left">
+			<div id="pic">
+				<img src="images/man_03.png">
+			</div>
+			<div id="name">
+				Hong Gil Dong
+			</div>
+			<div id="info">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, id nobis saepe natus iste doloremque!
+			</div>
+			<div id="birthday"  class="desc">
+				♨ 1995-05-25
+			</div>
+			<div id="email"  class="desc">
+				▣ hong@gmail.com
+			</div>
+			<div id="phone"  class="desc">
+				☎ 010-5874-5984
+			</div>
+			<div id="address"  class="desc">
+				♬ Teheran-ro, Gangnam-gu, Seoul, Republic of Korea
+			</div>
+		</div>
+		<div id="right">
+			<h1 id="title">Resume <small>Lorem ipsum dolor sit.</small></h1>
+			<h2>Lorem, ipsum.</h2>
+			<ul>
+				<img src="images/prj01.jpg" class="prj left">
+				<li>2019.02.22 - 2019.03.04</li>
+				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur distinctio commodi eveniet asperiores illum in ut praesentium, nam architecto quas similique. Natus cupiditate quisquam, placeat modi corporis voluptates porro reiciendis!</li>
+				<li>Officia, et, pariatur minima officiis iusto, accusamus eligendi tempore adipisci alias quos esse porro ab non architecto expedita omnis libero magnam sed similique illo perferendis quae sapiente amet. Optio, mollitia.</li>
+				<li>Facilis, tempora laboriosam aliquid debitis, laudantium, natus rerum ipsa voluptatibus molestiae distinctio provident eveniet impedit harum itaque. Veniam, explicabo dicta aliquam, reprehenderit saepe quas dignissimos placeat enim perspiciatis repellendus harum?</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, reiciendis, voluptate, provident hic beatae dolores quo quam est nostrum quidem obcaecati illo soluta exercitationem molestiae ipsa non esse recusandae quia!</li>
+			</ul>
+			<h2>Eum, imp dolor sit amet.</h2>
+			<ul>
+				<img src="images/prj02.jpg" class="prj left">
+				<li>2019.03.20 - 2019.04.11</li>
+				<li>Rerum adipisci perspiciatis ipsa sequi rem minus eligendi hic provident error modi! Repudiandae commodi, nulla expedita pariatur neque ab dolor earum nobis adipisci aperiam nisi inventore debitis officiis sunt eaque?</li>
+				<li>Quibusdam fugit temporibus aliquid odit in dolore maxime nisi quae id, accusantium, ea maiores distinctio magnam? Vel, harum ducimus sapiente voluptatem natus corrupti laborum animi labore veritatis. Veniam, libero. Nemo!</li>
+				<img src="images/prj05.jpg" class="prj right">
+				<li>Sed aliquam harum, ducimus numquam illo, est culpa atque quisquam eveniet aperiam tempore voluptate, consequatur dolor fuga quod nesciunt sapiente quas minima cum? At aut ducimus minus ad, adipisci saepe!</li>
+			</ul>
+			<h2>Sint, excepturi? aliquam</h2>
+			<ul>
+				<img src="images/prj03.jpg" class="prj left">
+				<li>Iste voluptatem aperiam, sint nostrum odit facilis? Est esse fugit aspernatur ex molestiae, nam voluptatem accusamus numquam officia quas beatae autem illum nesciunt vitae totam quae sunt, optio explicabo eos!</li>
+				<li>Illum nostrum voluptate, nam, obcaecati error, et nemo animi consectetur commodi tempora dolorem. Nostrum nobis vero at, modi quas harum voluptates voluptatem possimus molestias, et velit mollitia quasi earum molestiae!</li>
+			</ul>
+			<div id="copyright">
+				&copy;Copyright 2021 test.com All rights reserved.
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	
+</body>
+</html>
