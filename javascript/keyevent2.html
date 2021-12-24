@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Author" content="in">
+	<meta name="Generator" content="Visual Studio Code">
+	<title>JavaScript</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="basic.css">
+	<style>
+        form {
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        form > div {
+            margin-bottom: 15px;
+        }
+
+        #txtId { width: 150px; }
+        #txtMessage { width: 250px; border: 0px solid transparent; outline: none; color: red; }
+    </style>
+    <script>
+
+        var txtId, txtMessage;
+
+        function init() {
+            txtId = window.document.form1.txtId;
+            txtMessage = window.document.form1.txtMessage;
+            txtId.onkeyup = valid;
+        }
+
+        function valid() {
+            if (txtId.value.length < 5) {
+                txtMessage.value = "아이디가 너무 짧습니다.";
+            } else if (txtId.value.length > 20) {
+                txtMessage.value = "아이디가 너무 깁니다.";
+            } else {
+                txtMessage.value = "아이디가 적합합니다.";
+            }
+        }
+       
+    </script>
+</head>
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false' onload='init();'>
+    <div class="main m1400">
+        <div class="mainHeader">
+            <h1>키 이벤트</h1>
+            <div>아이디 길이의 유효성 검사를 하시오.</div>
+            <ul>
+                <li>5~20자 이내</li>
+            </ul>
+            <div class="code">onkeyup</div>
+        </div>
+        <form name="form1">
+            <h1>회원 가입</h1>
+    
+            <div>
+                아이디 : <input type="text" name="txtId">
+                <input type="text" name="txtMessage" id="txtMessage">
+            </div>
+            
+        </form>
+    </div>
+    <script src="basic.js"></script>    
+    </body>
+</html>    

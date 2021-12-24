@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="Author" content="in">
+	<meta name="Generator" content="Visual Studio Code">
+	<title>JavaScript</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="basic.css">
+	<style>
+	</style>
+</head>
+<body oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
+
+
+<style>
+	#tbl1 {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	#tbl1 td {
+		border: 1px solid black;
+		width: 120px;
+		height: 120px;
+	}
+	#tbl1 td img {
+	  display: block;
+		width: 120px;
+		height: 120px;
+	}
+</style>
+<script>
+	
+	var timer = 0;
+	var index = -1;
+	var cell, btn1;
+	var foot = "left";
+	var c = 255;
+
+	window.onload = function() {
+		
+		cell = document.getElementsByClassName("cell");
+		btn1 = document.getElementById("btn1");
+		
+		btn1.onclick = function() {
+		  timer = setInterval(function() {
+		    if (index > -1) {
+		      cell[index].innerHTML = "";
+		      cell[index].style.backgroundColor = "rgb(" + c + ", " + c + ", " + c + ")";
+		      c-=5;
+		      if (c < 0) clearInterval(timer);
+		    }
+    		index++;
+    		if (index == 5) index = 0;
+		    cell[index].innerHTML = "<img src='../images/foot_" + foot + "2.png'>";
+		    if (foot == "left") foot = "right";
+		    else foot = "left";
+		    
+		  }, 300);
+		};
+		
+	};
+	
+</script>
+<div class="main m800">
+	<div class="mainHeader">
+		<h1>발자국 ver. 타이머</h1>
+		<div>발자국이 지나간 곳은 점점 흙이 쌓인다.</div>
+		<ul>
+			<li>td.style.backgroundColor = rgb(n1, n2, n3);</li>
+			<li><a href="../images/foot.zip" download>이미지 다운로드</a></li>
+		</ul>
+		<div class="code"></div>
+	</div>
+	<input type="button" value="walk" id="btn1">
+	<hr>
+	<table id="tbl1">
+		<tr>
+			<td class="cell"></td>
+			<td class="cell"></td>
+			<td class="cell"></td>
+			<td class="cell"></td>
+			<td class="cell"></td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+
+
+	<script src="basic.js"></script>
+</body>
+</html>
