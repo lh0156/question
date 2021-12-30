@@ -103,7 +103,7 @@
             area = document.getElementById("area");
             stat = document.getElementById("stat");
             
-            //img1.src = "../images/x.png";
+            //img1.src = "images/x.png";
 
             score.value = n;
 
@@ -122,7 +122,7 @@
 
         function run() {
             var cat = document.createElement("img");
-            cat.src = "../images/catty0" + catno + ".png";
+            cat.src = "images/catty0" + catno + ".png";
             cat.style.position = "absolute";
             cat.style.left = parseInt(Math.random() * 1200) + "px";
             cat.style.top = parseInt(Math.random() * 500) + "px";
@@ -133,7 +133,7 @@
                 temp2 = setTimeout(function() {
                     area.removeChild(arguments[0]);
 
-                    imgPenalty[penalty].src = "../images/x.png";
+                    imgPenalty[penalty].src = "images/x.png";
                     penalty++;
                     if (penalty >= 3) {
                         for (var i=0; i<tlist.length; i++) {
